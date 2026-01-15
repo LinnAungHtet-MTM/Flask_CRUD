@@ -6,6 +6,7 @@ from flask_migrate import Migrate
 from routes.api import api
 from routes.auth import auth
 from config.logging import file_handler
+from app.Commands.seed import seed
 
 def create_app():
     app = Flask(__name__)
@@ -25,6 +26,9 @@ def create_app():
     # Register blueprints
     app.register_blueprint(auth, url_prefix='/auth')
     app.register_blueprint(api, url_prefix="/api")
+
+    # register flask command
+    app.cli.add_command(seed)
 
     return app
 
