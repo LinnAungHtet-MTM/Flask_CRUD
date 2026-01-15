@@ -36,14 +36,14 @@ Supports **user registration**, **login**, **refresh tokens**, and **CRUD operat
 1. Clone repository
 
 ```bash
-git clone <your-repo-url>
-cd <project-folder>
+git clone https://github.com/LinnAungHtet-MTM/Flask_CRUD.git
+cd Flask_CRUD
 ```
 
 2. Install dependencies
 
 ```bash
-poetry install --no-root
+poetry install
 ```
 
 3. Copy .env.example to .env
